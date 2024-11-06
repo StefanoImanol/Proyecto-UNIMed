@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Nueva Cita - UNIMed</title>
+    <link rel="stylesheet" href="AgendarCita.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="../Imagenes/LOGO2.png" alt="Logo Figura" class="logo-figura" onclick="window.location.href='HomePaciente.html'">
+            <img src="../Imagenes/UNIMed.png" alt="Logo Texto" class="logo-texto" onclick="window.location.href='HomePaciente.html'">
+        </div>
+    </header>
+    <main class="content">
+        <div class="appointment-container">
+            <h2>Agendar nueva cita</h2>
+            <hr>
+            <div class="appointment-content">
+                <!-- Columna Izquierda -->
+                <div class="left-column">
+                    <div class="patient-info">
+                        <label>Paciente</label>
+                        <div class="locked-field">
+                            <input type="text" id="nombrePaciente" value="Stefano Imanol" disabled>
+                            <span class="lock-icon">🔒</span>
+                        </div>
+                        <div class="locked-field">
+                            <input type="text" id="apellidoPaciente" value="Ramírez Uribe" disabled>
+                            <span class="lock-icon">🔒</span>
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <label>Médico</label>
+                        <select id="especialidad" class="select-field">
+                            <option value="">Especialidad</option>
+                        </select>
+                        <select id="medico" class="select-field">
+                            <option value="">Médicos</option>
+                        </select>
+                    </div>
+                    <div class="availability-section">
+                        <label>Horarios Disponibles</label>
+                        <div class="availability-content">
+                            <div id="calendar-container" class="calendar"></div>
+                            <div class="time-slots">
+                                <button class="time-slot">10:00 am</button>
+                                <button class="time-slot">11:00 am</button>
+                                <button class="time-slot unavailable">12:00 pm</button>
+                                <button class="time-slot unavailable">1:00 pm</button>
+                                <button class="time-slot">2:00 pm</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Columna Derecha -->
+                <div class="right-column">
+                    <img src="../Imagenes/Agendar.jpg" alt="Agendar" class="appointment-image">
+                    <div class="action-buttons">
+                        <button class="btn-cancel" onclick="window.location.href='HomePaciente.html'">Cancelar</button>
+                        <button class="btn-save">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+    <script src="AgendarCita.js"></script>
+</body>
+</html>
