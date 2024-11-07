@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Próxima Cita - UNIMed</title>
+    <link rel="stylesheet" href="ProximaCita.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="../Imagenes/LOGO2.png" alt="Logo Figura" class="logo-figura" onclick="window.location.href='HomePaciente.html'">
+            <img src="../Imagenes/UNIMed.png" alt="Logo Texto" class="logo-texto" onclick="window.location.href='HomePaciente.html'">
+        </div>
+        <button class="btn-logout" class="logo-texto" onclick="window.location.href='HomePaciente.html'">Salir</button>
+    </header>
+    <main class="profile-content">
+        <div class="sidebar">
+            <div class="profile-picture">
+                <img src="../Imagenes/UserAjustado.png" alt="Foto de perfil" id="profileImage">
+                <label for="fileUpload" class="camera-icon">
+                    <img src="../Imagenes/Camara.png" alt="Cambiar foto" style="width: 24px; height: 24px;">
+                </label>
+                <input type="file" id="fileUpload" accept="image/*" style="display: none;">
+            </div>
+            <button class="sidebar-button" onclick="window.location.href='PerfilPaciente.html'">Datos Personales</button>
+            <button class="sidebar-button active">Próxima Cita</button>
+        </div>
+        
+        <div class="details-panel">
+            <h2>Próxima Cita...</h2>
+            <hr>
+            <div class="appointment-details">
+                <p><strong>Día:</strong> <span id="cita-dia">15/10/2024</span></p>
+                <p><strong>Hora:</strong> <span id="cita-hora">2:00 pm</span></p>
+                <p><strong>Especialidad:</strong> <span id="cita-especialidad">Medicina general</span></p>
+                <p><strong>Doctor:</strong> <span id="cita-doctor">Mauricio Ramos Cordoba</span></p>
+            </div>
+            <div class="form-buttons">
+                <button id="btn-reprogramar" class="btn-reprogramar" disabled>Reprogramar</button>
+                <button id="btn-cancelar" class="btn-cancel">Cancelar Cita</button>
+            </div>
+        </div>
+    </main>
+    <script src="ProximaCita.js"></script>
+</body>
+</html>

@@ -17,12 +17,14 @@
     <main class="profile-content">
         <div class="sidebar">
             <div class="profile-picture">
-                <img src="../Imagenes/User.png" alt="Foto de perfil" id="profileImage">
-                <label for="fileUpload" class="camera-icon">📷</label>
+                <img src="../Imagenes/UserAjustado.png" alt="Foto de perfil" id="profileImage">
+                <label for="fileUpload" class="camera-icon">
+                    <img src="../Imagenes/Camara.png" alt="Cambiar foto" style="width: 24px; height: 24px;">
+                </label>
                 <input type="file" id="fileUpload" accept="image/*" style="display: none;">
             </div>
             <button class="sidebar-button active">Datos Personales</button>
-            <button class="sidebar-button">Próxima Cita</button>
+            <button class="sidebar-button" onclick="window.location.href='ProximaCita.html'">Próxima Cita</button>
         </div>
         <div class="details-panel">
             <h2>Datos Personales</h2>
