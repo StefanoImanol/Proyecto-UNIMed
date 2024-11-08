@@ -7,46 +7,60 @@
     <link rel="stylesheet" href="Modificar.css">
 </head>
 <body>
+    <header class="header">
+        <div class="logo">
+            <img src="../Imagenes/LOGO2.png" alt="Logo Figura" class="logo-figura" onclick="window.location.href='Modificar.html'">
+            <img src="../Imagenes/UNIMed.png" alt="Logo Texto" class="logo-texto" onclick="window.location.href='Modificar.html'">
+        </div>
+        <button class="inicio-btn" onclick="window.location.href='HomeAdministrador.html'">Inicio</button>
+    </header>
     <div class="container">
-        <header class="header">
-            <div class="logo">
-                <img src="LOGO2.png" alt="Logo Figura" class="logo-figura" onclick="window.location.href='Modificar.html'">
-                <img src="UNIMed.png" alt="Logo Texto" class="logo-texto" onclick="window.location.href='Modificar.html'">
-            </div>
-            <button class="inicio-btn" onclick="window.location.href='Home Administrador - UNIMed.html'">Inicio</button>
-        </header>
         <div class="content">
             <h2>Especialidad</h2>
             <div class="specialties">
+                <!-- Especialidades existentes -->
                 <div class="specialty">
-                    <img src="especialidades.png" alt="Especialidad">
+                    <img src="../Imagenes/especialidades.png" alt="Especialidad">
                     <button onclick="window.location.href='modificarHora.html'">Medicina General</button>
                 </div>
                 <div class="specialty">
-                    <img src="especialidades.png" alt="Especialidad">
+                    <img src="../Imagenes/especialidades.png" alt="Especialidad">
                     <button onclick="window.location.href='modificarHora.html'">Oftalmología</button>
                 </div>
                 <div class="specialty">
-                    <img src="especialidades.png" alt="Especialidad">
+                    <img src="../Imagenes/especialidades.png" alt="Especialidad">
                     <button onclick="window.location.href='modificarHora.html'">Psicología</button>
                 </div>
                 <div class="specialty">
-                    <img src="especialidades.png" alt="Especialidad">
+                    <img src="../Imagenes/especialidades.png" alt="Especialidad">
                     <button onclick="window.location.href='modificarHora.html'">Odontología</button>
                 </div>
                 <div class="specialty">
-                    <img src="especialidades.png" alt="Especialidad">
+                    <img src="../Imagenes/especialidades.png" alt="Especialidad">
                     <button onclick="window.location.href='modificarHora.html'">Nutrición</button>
                 </div>
                 <div class="specialty">
-                    <img src="especialidades.png" alt="Especialidad">
+                    <img src="../Imagenes/especialidades.png" alt="Especialidad">
                     <button onclick="window.location.href='modificarHora.html'">Dermatología</button>
                 </div>
+                <!-- Botón para añadir especialidad -->
                 <div class="specialty add">
-                    <img src="+.png" alt="Añadir Especialidad" onclick="window.location.href='Modificar.html'">
+                    <img src="../Imagenes/+.png" alt="Añadir Especialidad" onclick="openModal()">
                 </div>
             </div>
         </div>
     </div>
+    
+    <!-- Modal para añadir especialidad -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3>Añadir Especialidad</h3>
+            <input type="text" id="specialtyName" placeholder="Nombre de la Especialidad">
+            <button onclick="addSpecialty()">Agregar</button>
+        </div>
+    </div>
+
+    <script src="Modificar.js"></script>
 </body>
 </html>
