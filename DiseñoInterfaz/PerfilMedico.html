@@ -3,63 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil de Médico - UNIMed</title>
-    <link rel="stylesheet" href="PerfilMedico.css">
+    <title>Perfil de Paciente - UNIMed</title>
+    <link rel="stylesheet" href="PerfilPaciente.css">
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <div class="logo">
-                <img src="LOGO2.png" alt="Logo Figura" class="logo-figura" onclick="window.location.href='PerfilMedico.html'">
-                <img src="UNIMed.png" alt="Logo Texto" class="logo-texto" onclick="window.location.href='PerfilMedico.html'">
-            </div>
-            <button class="inicio-btn" onclick="window.location.href='Home Médico - UNIMed.html'">Inicio</button>
-        </header>
-        <div class="profile-container">
+    <header>
+        <div class="logo-container">
+            <img src="../Imagenes/LOGO2.png" alt="Logo Figura" class="logo-figura" onclick="window.location.href='HomeMedico.html'">
+            <img src="../Imagenes/UNIMed.png" alt="Logo Texto" class="logo-texto" onclick="window.location.href='HomeMedico.html'">
+        </div>
+        <button class="btn-logout" class="logo-texto" onclick="window.location.href='HomeMedico.html'">Inicio</button>
+    </header>
+    <main class="profile-content">
+        <div class="sidebar">
             <div class="profile-picture">
-                <img src="perfil.png" alt="Foto de perfil">
-            </div>
-            <div class="profile-info">
-                <h2>Datos Personales</h2>
-                <form>
-                <hr>
-                    <div class="form-group">
-                        <label>Nombre</label>
-                        <input type="text" value="Stefano Imanol" readonly>
-                        <button class="edit-btn">Editar</button>
-                    </div>
-                    <div class="form-group">
-                        <label>Apellidos</label>
-                        <input type="text" value="Ramírez Uribe" readonly>
-                        <button class="edit-btn">Editar</button>
-                    </div>
-                    <div class="form-group">
-                        <label>Correo electrónico</label>
-                        <input type="text" value="s***u@uni.pe" readonly>
-                        <button class="edit-btn">Editar</button>
-                    </div>
-                    <div class="form-group">
-                        <label>Fecha de nacimiento</label>
-                        <input type="text" value="20/02/2004" readonly>
-                        <button class="edit-btn">Editar</button>
-                    </div>
-                    <div class="form-group">
-                        <label>Especialidad</label>
-                        <input type="text" value="Medicina General" readonly>
-                        <button class="edit-btn">Editar</button>
-                    </div>
-                    <div class="form-group">
-                        <label>Número de teléfono</label>
-                        <input type="text" placeholder="Agregar número">
-                        <button class="add-btn">Agregar</button>
-                    </div>
-                    <div class="form-actions">
-                        <button type="button" class="cancel-btn">Cancelar</button>
-                        <button type="submit" class="save-btn">Guardar</button>
-                    </div>
-                </form>
+                <img src="../Imagenes/UserAjustado.png" alt="Foto de perfil" id="profileImage">
+                <label for="fileUpload" class="camera-icon">
+                    <img src="../Imagenes/Camara.png" alt="Cambiar foto" style="width: 24px; height: 24px;">
+                </label>
+                <input type="file" id="fileUpload" accept="image/*" style="display: none;">
             </div>
         </div>
-    </div>
+        <div class="details-panel">
+            <h2>Datos Personales</h2>
+            <hr>
+        </br>
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" value="Nombre del médico" readonly>
+                <button onclick="toggleEdit('nombre')">Editar</button>
+            </div>
+            <div class="form-group">
+                <label for="apellidos">Apellidos</label>
+                <input type="text" id="apellidos" value="Apellidos del médico" readonly>
+                <button onclick="toggleEdit('apellidos')">Editar</button>
+            </div>
+            <div class="form-group">
+                <label for="correo">Correo electrónico</label>
+                <input type="text" id="correo" value="s***@uni.pe" readonly>
+                <button onclick="toggleEdit('correo')">Editar</button>
+            </div>
+            <div class="form-group">
+                <label for="especialidad">Dirección</label>
+                <input type="text" id="especialidad" placeholder="Agregar" readonly>
+                <button onclick="toggleEdit('especialidad')">Agregar</button>
+            </div>
+            <div class="form-group">
+                <label for="telefono">Número de teléfono</label>
+                <input type="text" id="telefono" placeholder="Agregar" readonly>
+                <button onclick="toggleEdit('telefono')">Agregar</button>
+            </div>
+            <div class="form-buttons">
+                <button class="btn-cancel" class="logo-texto" onclick="window.location.href='PerfilMedico.html'">Cancelar</button>
+                <button class="btn-save">Guardar</button>
+            </div>
+        </div>
+    </main>
+    <script src="PerfilPaciente.js"></script>
 </body>
 </html>
