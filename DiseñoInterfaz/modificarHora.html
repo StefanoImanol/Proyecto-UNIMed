@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,33 +7,59 @@
     <link rel="stylesheet" href="modificarHora.css">
 </head>
 <body>
+    <header>
+        <div class="logo-container">
+            <img src="../Imagenes/LOGO2.png" alt="Logo Figura" class="logo-figura" onclick="window.location.href='HomePaciente.html'">
+            <img src="../Imagenes/UNIMed.png" alt="Logo Texto" class="logo-texto" onclick="window.location.href='HomePaciente.html'">
+        </div>
+    </header>
     <div class="container">
-        <header class="header">
-            <div class="logo">
-                <img src="LOGO2.png" alt="Logo Figura" class="logo-figura" onclick="window.location.href='Home Administrador - UNIMed.html'">
-                <img src="UNIMed.png" alt="Logo Texto" class="logo-texto" onclick="window.location.href='Home Administrador - UNIMed.html'">
-            </div>
-        </header>
         <div class="content">
             <h2>Medicina General</h2>
             <div class="doctors">
                 <div class="doctor">
-                    <img src="doc.png" alt="Médico 1" onclick="window.location.href='modificarHora.html'">
+                    <img src="../Imagenes/doc.png" alt="Médico 1" onclick="openEditModal('Edward Soto', '8:00 - 12:00')">
                     <button>Edward Soto</button>
                     <span>8:00 - 12:00</span>
                 </div>
                 
                 <div class="doctor">
-                    <img src="doc.png" alt="Médico 2" onclick="window.location.href='modificarHora.html'">
+                    <img src="../Imagenes/doc.png" alt="Médico 2" onclick="openEditModal('Cristian Bazán', '2:00 - 6:00')">
                     <button>Cristian Bazán</button>
                     <span>2:00 - 6:00</span>
                 </div>
                 
                 <div class="doctor add">
-                    <img src="+.png" alt="Añadir Médico" onclick="window.location.href='modificarHora.html'">
+                    <img src="../Imagenes/+.png" alt="Añadir Médico" onclick="openAddModal()">
                 </div>
             </div>
         </div>
     </div>
+    
+    <!-- Modal para editar médico -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeEditModal()">&times;</span>
+            <h3>Editar Médico</h3>
+            <input type="text" id="editName" placeholder="Nombre del Médico">
+            <input type="text" id="editSchedule" placeholder="Horario">
+            <button onclick="saveEdit()">Guardar Cambios</button>
+        </div>
+    </div>
+
+    <!-- Modal para añadir nuevo médico -->
+    <div id="addModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAddModal()">&times;</span>
+            <h3>Añadir Nuevo Médico</h3>
+            <input type="text" id="newName" placeholder="Nombre del Médico">
+            <input type="text" id="newSchedule" placeholder="Horario">
+            <input type="email" id="newEmail" placeholder="Correo">
+            <input type="password" id="newPassword" placeholder="Contraseña">
+            <button onclick="addDoctor()">Añadir Médico</button>
+        </div>
+    </div>
+
+    <script src="modificarHora.js"></script>
 </body>
 </html>
