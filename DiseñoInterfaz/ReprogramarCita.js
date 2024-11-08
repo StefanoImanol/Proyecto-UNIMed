@@ -24,9 +24,4 @@ document.querySelectorAll(".time-slot").forEach(button => {
 document.getElementById("btn-confirmar").addEventListener("click", function() {
     const selectedDate = document.getElementById('calendar-container').value;
     const selectedTime = document.querySelector(".time-slot.selected")?.innerText;
-    if (selectedDate && selectedTime) {
-        alert("Cita reprogramada para " + selectedDate + " a las " + selectedTime);
-    } else {
-        alert("Por favor selecciona una fecha y un horario.");
-    }
 });

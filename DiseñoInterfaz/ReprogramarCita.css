@@ -39,10 +39,6 @@ header {
 .btn-logout {
     background-color: #4CAF50;
     color: #ffffff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
 }
 
 .profile-content {
@@ -180,12 +176,12 @@ hr {
 
 .form-buttons {
     display: flex;
-    justify-content: flex-start;
+    justify-content: right;
     gap: 10px;
     margin-top: 20px;
 }
 
-.btn-regresar, .btn-confirmar {
+.btn-regresar, .btn-confirmar,.btn-logout  {
     padding: 10px 20px;
     border: none;
     border-radius: 4px;

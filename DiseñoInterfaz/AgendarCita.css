@@ -136,14 +136,17 @@ hr {
     cursor: pointer;
 }
 
+.time-slot:hover {
+    background-color: #f2dede;
+}
 .time-slot.unavailable {
-    background-color: #a52424;
-    color: #fff;
+    background-color: #ddd;
+    color: #777;
     cursor: not-allowed;
 }
 .time-slot.selected {
-    background-color: #f9f3f4; /* Cambia a verde cuando está seleccionado */
-    color: #a52424;
+    background-color: #a52424;
+    color: #ffffff;
 }
 
 .appointment-image {
