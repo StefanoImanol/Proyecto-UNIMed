@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f9f4f4;
+}
+
+.container {
+    width: 95%;
+    max-width: 1000px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 34px;
+    color: #a42323;
+    font-weight: bold;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 12px;
+    filter: drop-shadow(3px 4px 2px rgba(0, 0, 0, 0.4));
+}
+
+.inicio-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.content {
+    margin-top: 25px;
+    text-align: left;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.specialties {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.specialty {
+    width: 150px;
+    text-align: center;
+}
+
+.specialty img {
+    width: 100%;
+    max-width: 140px;
+    height: auto;
+    margin-bottom: 12px;
+}
+
+.specialty button {
+    background-color: #a42323;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.specialty.add button {
+    background-color: #4CAF50; /* Cambia el color para diferenciar el botón de añadir */
+}
