@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    cursor: pointer;
+    filter: drop-shadow(3px 4px 2px rgba(0, 0, 0, 0.4));
+}
+
+.logo .logo-figura {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.logo .logo-texto {
+    width: 150px;
+}
+
+.inicio-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.inicio-btn:hover {
+    background-color: #45a049;
+}
+
+/* Profile Section */
+.profile-container {
+    display: flex;
+    gap: 20px;
+}
+
+.profile-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-info h2 {
+    margin-bottom: 20px;
+    color: #000;
+}
+
+/* Form Styles */
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    width: 150px;
+    font-weight: bold;
+}
+
+.form-group input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.form-group input[readonly] {
+    background-color: #e9ecef;
+    color: #333;
+}
+
+.edit-btn, .add-btn {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.edit-btn:hover, .add-btn:hover {
+    background-color: #45a049;
+}
+
+/* Action Buttons */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.cancel-btn, .save-btn {
+    padding: 10px 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    background-color: #d9534f;
+    color: #fff;
+}
+
+.cancel-btn:hover {
+    background-color: #c9302c;
+}
+
+.save-btn {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+.save-btn:hover {
+    background-color: #45a049;
+}
