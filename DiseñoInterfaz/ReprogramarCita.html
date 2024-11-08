@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Reprogramar Cita - UNIMed</title>
+        <link rel="stylesheet" href="ReprogramarCita.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+        <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+    </head>
+    
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="../Imagenes/LOGO2.png" alt="Logo Figura" class="logo-figura" onclick="window.location.href='HomePaciente.html'">
+            <img src="../Imagenes/UNIMed.png" alt="Logo Texto" class="logo-texto" onclick="window.location.href='HomePaciente.html'">
+        </div>
+        <button class="btn-logout" onclick="window.location.href='HomePaciente.html'">Salir</button>
+    </header>
+    <main class="profile-content">
+        <div class="sidebar">
+            <div class="profile-picture">
+                <img src="../Imagenes/UserAjustado.png" alt="Foto de perfil" id="profileImage">
+                <label for="fileUpload" class="camera-icon">
+                    <img src="../Imagenes/Camara.png" alt="Cambiar foto" style="width: 24px; height: 24px;">
+                </label>
+                <input type="file" id="fileUpload" accept="image/*" style="display: none;">
+            </div>
+            <button class="sidebar-button" onclick="window.location.href='PerfilPaciente.html'">Datos Personales</button>
+            <button class="sidebar-button active">Próxima Cita</button>
+        </div>
+        
+        <div class="details-panel">
+            <h2>Reprogramar Cita...</h2>
+            <hr>
+            <div class="appointment-schedule">
+                <div class="availability-section">
+                    <div class="availability-content">
+                        <div id="calendar-container" class="calendar"></div>
+                        <div class="time-slots">
+                            <button class="time-slot">10:00 am</button>
+                            <button class="time-slot">11:00 am</button>
+                            <button class="time-slot unavailable">12:00 pm</button>
+                            <button class="time-slot unavailable">1:00 pm</button>
+                            <button class="time-slot">2:00 pm</button>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+            <div class="form-buttons">
+                <button id="btn-regresar" class="btn-regresar" onclick="window.location.href='ProximaCita.html'">Regresar</button>
+                <button id="btn-confirmar" class="btn-confirmar">Confirmar</button>
+            </div>
+        </div>
+    </main>
+    <script src="ReprogramarCita.js"></script>
+</body>
+</html>
