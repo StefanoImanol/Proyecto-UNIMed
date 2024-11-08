@@ -109,41 +109,42 @@ hr {
 }
 
 .calendar {
-    width: 60%; /* Ajusta el tamaño del calendario */
+    width: 50%; /* Ajusta el tamaño del calendario */
     max-width: 200px;
     margin-left: -10; /* Asegúrate de que el calendario no tenga margen a la izquierda */
 }
 
 .time-slots {
-    width: 40%; /* Ajusta el ancho de las horas */
-    max-width: 120px; /* Limita el ancho de los botones de horario */
     display: flex;
     flex-direction: column;
     gap: 10px;
+    max-height: 200px; /* Ajusta este valor según sea necesario */
+    overflow-y: auto; /* Agrega esta línea para permitir desplazamiento */
+    width: 100000px; /* Ajusta el ancho según sea necesario */
 }
 
 
 .time-slot {
-    width: 300%; /* Ajusta el ancho para estar al lado del calendario */
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
     padding: 10px;
     border: 1px solid #a52424;
     border-radius: 4px;
-    background-color: #fff;
+    background-color: #ffffff;
     color: #a52424;
     cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .time-slot:hover {
     background-color: #f2dede;
 }
+
 .time-slot.unavailable {
     background-color: #ddd;
     color: #777;
     cursor: not-allowed;
 }
+
 .time-slot.selected {
     background-color: #a52424;
     color: #ffffff;
@@ -184,17 +185,17 @@ hr {
 .availability-section {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: left;
     gap: 10px;
-    width: 50%;
+    width: 100%;
     margin-left: 0; /* Asegúrate de que no haya margen a la izquierda */
 }
 
 .availability-content {
     display: flex;
     gap: 20px;
-    width: 50%;
+    width: 100%;
     align-items: flex-start;
-    justify-content: flex-start; /* Alinea todo el contenido a la izquierda */
+    justify-content: left; /* Alinea todo el contenido a la izquierda */
     margin-left: -20px; /* Asegúrate de que no haya margen a la izquierda */
 }

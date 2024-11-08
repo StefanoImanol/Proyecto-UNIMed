@@ -143,10 +143,11 @@ hr {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    max-height: 300px;
-    overflow-y: auto;
-    width: 150px; /* Ajusta el ancho de la lista de horarios según sea necesario */
+    max-height: 200px; /* Ajusta este valor según sea necesario */
+    overflow-y: auto; /* Agrega esta línea para permitir desplazamiento */
+    width: 150px; /* Ajusta el ancho según sea necesario */
 }
+
 
 .time-slot {
     padding: 10px;
